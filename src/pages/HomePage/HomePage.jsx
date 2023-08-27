@@ -99,24 +99,7 @@ const HomePage = () => {
 
             <ThreeTypeNFT />
 
-
-            {/* <div className="HelmetSectionContainer">
-                <div className="HelmetSectionContainerCentered">
-                    <img src={helmat} alt="" />
-                    <h2>LEGENDARY <span className="level-span">1/1</span>  SOLDIERS</h2>
-                    <p>A select number of Soldier NFTs will feature one-of-one (1/1) characters with completely unique outfits. Explore a rich history of famous historical figures from all parts of the world – from Julius Caesar, Cleopatra to Genghis Khan and more.</p>
-                    <div className='HelmetSectionContainerIMG'>
-                        <img src={northPuppet} alt="" />
-                    </div>
-                    <h5>The days are gone forever when our enemies<br /> could blackmail us with nuclear bombs</h5> */}
-
             <CarouselPuppet />
-
-
-            {/* </div>
-            </div> */}
-
-
 
             <div className="ANewEraContainer">
                 <div className="ANewEraContainerCentered">

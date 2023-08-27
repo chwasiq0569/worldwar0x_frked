@@ -1,6 +1,6 @@
 /* BattleITOut Start */
 .BattleItOutContainer {
-  margin-top: 150px;
+  margin-top: 400px;
 }
 
 .BattleItOutContainerCentered {
@@ -44,7 +44,6 @@
 }
 
 .BattleItOutBox .landlarge-img:hover {
-  /* width: 100%; */
   transform: scale(1.05);
 }
 
@@ -72,7 +71,7 @@
   }
 
   .BattleItOutContainer {
-    margin-top: 100px;
+    margin-top: 300px;
   }
 }
 
@@ -80,6 +79,11 @@
   .BattleItOutContainerCentered {
     grid-template-columns: repeat(2, 1fr);
   }
+}
+@media only screen and (max-width: 700px) {
+  .BattleItOutContainer {
+    margin-top: 150px;
+  } 
 }
 
 @media only screen and (max-width: 450px) {

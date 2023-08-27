@@ -297,16 +297,16 @@ a {
 .HelmetSectionContainerIMG h3 {
   color: #ED1C27;
   font-family: var(--font-pink-and-crimson);
-  font-size: 6.5vw;
+  font-size: 8vw;
   font-weight: 400;
   text-align: center;
-  letter-spacing: 8px;
+  /* letter-spacing: 8px; */
   /* line-height: 128px; */
 }
 
 .HelmetSectionContainerIMG img {
-  /* width: 171px; */
-  /* height: 373px; */
+  width: 171px;
+  height: 373px;
   position: relative;
   margin-top: -300px;
   /* object-fit: cover; */

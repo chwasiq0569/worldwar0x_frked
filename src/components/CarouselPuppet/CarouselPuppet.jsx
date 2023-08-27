@@ -6,7 +6,7 @@ import northPuppet from '../../assets/kim-removebg-preview 7.png';
 
 import kim from '../../assets/kim-removebg-preview 6.png';
 import kims from '../../assets/photo_2023-08-14_15-43-51 2.png';
-import kimss from '../../assets/photo_2023-08-03_22-45-24 6.png';
+import kimss from '../../assets/kim-removebg-preview 7.png';
 import kimsss from '../../assets/low-poly-solderssss.png';
 import kimssss from '../../assets/image 1174.png';
 import arrow8 from '../../assets/Arrow 8.png'
@@ -28,12 +28,11 @@ const imageTexts = [
 ];
 
 const imageTextsh3 = [
-    "SUPREME LEADER OF NORTH KOREA",
-    "RUPREME LEADER OF NORTH KOREA",
     "FUPREME LEADER OF NORTH KOREA",
+    "RUPREME LEADER OF NORTH KOREA",
+    "SUPREME LEADER OF NORTH KOREA",
     "GUPREME LEADER OF NORTH KOREA",
     "RUPREME LEADER OF NORTH KOREA",
-    // Add more texts for other images here
 ];
 const imagePuppets = [
     kimssss,
@@ -98,7 +97,7 @@ const MyCarousel = () => {
                         <div
                             key={item.id}
                             className='custom-div'
-                            style={{ width: index == 2 && "5.5rem", height: index == 2 && "5.5rem" }}
+                            style={{ width: index === 2, height: index === 2}}
                         >
                             <img
                                 src={item.src}

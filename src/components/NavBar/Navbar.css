@@ -174,7 +174,7 @@
   display: flex;
   flex-direction: column;
   padding: 0px 20px;
-  z-index: 1000;
+  z-index: 10000000;
   /* z-index: 100; */
 }
 
@@ -185,11 +185,27 @@
   cursor: pointer;
 }
 
-.CloseIcon {
+/* .CloseIcon {
   width: 25px;
   height: 3px;
   background-color: white;
   margin: 4px 0;
+} */
+.CloseIcon {
+  width: 25px;
+  height: 3px;
+  background-color: white;
+  position: absolute;
+  margin: 10px;
+  transform-origin: center;
+}
+
+.CloseIcon:first-child {
+  transform: translate(-50%, -50%) rotate(45deg);
+}
+
+.CloseIcon:last-child {
+  transform: translate(-50%, -50%) rotate(-45deg);
 }
 
 .menu-open .HeaderContainer {

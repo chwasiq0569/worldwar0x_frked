@@ -82,13 +82,13 @@ const MyCarousel = () => {
                 <img src={helmat} alt="" />
                 <h2>LEGENDARY <span className="level-span">1/1</span>  SOLDIERS</h2>
                 <p>A select number of Soldier NFTs will feature one-of-one (1/1) characters with completely unique outfits. Explore a rich history of famous historical figures from all parts of the world – from Julius Caesar, Cleopatra to Genghis Khan and more.</p>
-                <div className='HelmetSectionContainerIMG'>
-                    <h3>{imageTextsh3[selectedItem]}</h3>
+                <div className='HelmetSectionContainerIMG scrolling-text-container'>
+                    <marquee className='scrolling-text'>{imageTextsh3[selectedItem]}</marquee>
                     <div className='asdas'>
                         <img src={imagePuppets[selectedItem]} alt="" />
                     </div>
                 </div>
-                <h5>{imageTexts[selectedItem]}</h5>
+                <h5><span className="quotation">"</span>{imageTexts[selectedItem]}<span className="quotation">"</span></h5>
 
 
                 <div style={{ display: 'flex', alignItems: 'center' }} className='maindivcustom'>

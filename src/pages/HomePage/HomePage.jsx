@@ -6,7 +6,7 @@ import NftSoldier from "../../assets/low-poly-solder.png";
 import line from "../../assets/image 1153.png";
 import helmat from "../../assets/helmat.png";
 import cloud1 from "../../assets/image 1118.png";
-import cloudW from "../../assets/image 1125.png";
+import cloudW from "../../assets/image 11251212.png";
 import helicopter from "../../assets/helicopter.png";
 import cloud2 from "../../assets/image 1119.png";
 import soldiers from "../../assets/war-nobg 1.png";
@@ -38,7 +38,7 @@ import squadsLine from "../../assets/Rectangle 53.png";
 import mobileVersionImg from "../../assets/Group 5.png";
 import appStore from "../../assets/Group 6.png";
 import googlePlay from "../../assets/Group 7.png";
-import ecosystemImg from "../../assets/Auto-Tranny-Header-12 2.png";
+import ecosystemImg from "../../assets/Group 2.png";
 import ecosystemflower from "../../assets/Group8.png";
 import hand from "../../assets/hand.png";
 import group65 from "../../assets/Group 65.png";
@@ -73,7 +73,7 @@ const HomePage = () => {
 
             <HeroSection />
 
-            <div className="FirstEditionContainer">
+            <div className="FirstEditionContainer" id='FirstEdition'>
                 <div className="FirstEditionContainerCentered">
                     <div className="FirstEditionContainer-Text">
                         <h4>FIRST EDITION</h4>
@@ -101,7 +101,7 @@ const HomePage = () => {
 
             <CarouselPuppet />
 
-            <div className="ANewEraContainer">
+            <div className="ANewEraContainer" id='NEWERA'>
                 <div className="ANewEraContainerCentered">
                     <div className="ANewEraContainer-img">
                         <img src={cloud1} alt="" />
@@ -266,7 +266,7 @@ const HomePage = () => {
 
             </div>
 
-            <div className="EcoSystemContainer">
+            <div className="EcoSystemContainer" id='WARXECOSYSTEM'>
 
                 <div className="EcoSystemContainerBox">
                     <img src={ecosystemflower} alt="" />
@@ -276,7 +276,7 @@ const HomePage = () => {
                         <li>Gaming</li>
                         <li>Ownership</li>
                     </ul>
-                    <p className="EcoSystem-p">World War 0x is both free-to-play and play-to-earn. Anyone can play for free at WorldWar0x.io; however to access the play-to-earn competitive betting ecosystem players must have a Soldier NFT in their wallet —  either by owning or renting it.</p>
+                    <p className="EcoSystem-p"><a href="WorldWar0x.io">World War 0x</a> is both free-to-play and play-to-earn. Anyone can play for free at WorldWar0x.io; however to access the play-to-earn competitive betting ecosystem players must have a Soldier NFT in their wallet —  either by owning or renting it.</p>
                     <div className="EcoSystem-textIcon">
                         <p>WARX will offer a robust renting system to allow owners to rent their NFTs out by the hour, day or week.</p>
                         <img src={hand} alt="" />

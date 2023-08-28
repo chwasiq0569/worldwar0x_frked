@@ -248,6 +248,7 @@ a {
   display: flex;
   justify-content: center;
   align-items: center;
+  overflow: hidden;
   padding: 30px 0px 200px 0px;
   /* border: 1px solid red; */
   /* min-height: 80vh; */
@@ -258,7 +259,7 @@ a {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  width: 65%;
+  /* width: 65%; */
   margin: auto;
 }
 
@@ -292,14 +293,37 @@ a {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  padding: 7rem 0rem 1rem 0rem;
+  padding: 15rem 0rem 1rem 0rem;
+  width: 100%;
+  /* border: 1px solid red; */
 }
-.HelmetSectionContainerIMG h3 {
+/* .scrolling-text-container {
+  overflow: hidden; 
+  width: 100%;      
+}
+
+.scrolling-text {
+  animation: scrollText 2s linear infinite; 
+  white-space: nowrap; 
+}
+
+@keyframes scrollText {
+  0% {
+    transform: translateX(100%); 
+  }
+  100% {
+    transform: translateX(-200%); 
+  }
+} */
+
+.HelmetSectionContainerIMG marquee {
   color: #ED1C27;
   font-family: var(--font-pink-and-crimson);
   font-size: 8vw;
   font-weight: 400;
   text-align: center;
+  white-space: nowrap; 
+
   /* letter-spacing: 8px; */
   /* line-height: 128px; */
 }
@@ -310,7 +334,7 @@ a {
   position: relative;
   margin-top: -300px;
   /* object-fit: cover; */
-    
+
 }
 
 /* New */
@@ -318,18 +342,20 @@ a {
 
 
 .HelmetSectionContainerCentered h5 {
-  min-width: 100%;
+  width: 58%;
   color: #FFF;
   text-align: center;
   font-family: var(--font-pink-and-crimson);
   font-size: 28px;
   font-style: normal;
   font-weight: 400;
-  line-height: 34px;
+  /* line-height: 34px; */
   letter-spacing: 1px;
   margin-top: 20px;
-  /* margin: 0; */
+  padding: 0px 80px;
+  position: relative;
 }
+
 
 .HelmetSectionContainerCentered p {
   margin-top: 20px;
@@ -342,6 +368,24 @@ a {
   width: 80%;
 }
 
+.HelmetSectionContainerCentered h5 span.quotation {
+  position: absolute;
+  font-size: 82px;
+  color: #ed1c27;
+  vertical-align: middle;
+  line-height: 0;
+  margin-right: 10px;
+  top: 0;
+}
+.HelmetSectionContainerCentered h5 span.quotation:nth-child(1){
+  /* padding-left: -200px; */
+  left: 0;
+  top: 50px;
+}
+.HelmetSectionContainerCentered h5 span.quotation:nth-child(2){
+  right: 0;
+  top: 50px;
+}
 .secondary_text_container {
   display: flex;
   justify-content: center;
@@ -542,7 +586,7 @@ a {
   color: white;
   text-align: center;
   font-family: var(--font-primetime);
-  font-size: 35px;
+  font-size: 28px;
   font-weight: 400;
   margin-top: -2px;
   display: flex;
@@ -593,6 +637,7 @@ a {
   font-family: var(--font-zen-dots);
   font-size: 47px;
   font-weight: 400;
+  line-height: 42px;
   letter-spacing: -0.058px;
 }
 
@@ -681,7 +726,7 @@ a {
   font-weight: 200;
   /* line-height: 16px; */
   /* letter-spacing: 1px; */
-  line-height: 1.5;
+  line-height: 1.8;
   font-family: var(--font-transducer-test);
 
 }
@@ -793,6 +838,7 @@ a {
   justify-content: center;
   align-items: center;
   padding-bottom: 20px;
+  /* border: 1px solid red; */
 }
 
 .SquadsSectionContainer-InnerBox:nth-child(2) {
@@ -819,7 +865,9 @@ a {
   letter-spacing: 1px;
 }
 
-.SquadsSectionContainer-InnerBox img {}
+.SquadsSectionContainer-InnerBox img:nth-child(3) {
+  width: 50%;
+}
 
 .SquadsSectionContainer-InnerBox p {
   color: #FFF;
@@ -883,9 +931,9 @@ a {
   color: #FFF;
   font-family: var(--font-poppins);
   width: 70%;
-  font-size: 18px;
+  font-size: 21px;
+  line-height: 32px;
   font-weight: 400;
-  line-height: 28px;
   /* letter-spacing: 1px; */
   padding: 35px 0px;
 }
@@ -903,6 +951,8 @@ a {
 /* EcoSystem Start */
 .EcoSystemContainer {
   display: flex;
+  justify-content: flex-end;
+  align-items: flex-end;
   padding: 180px 0px 0px 0px;
 }
 
@@ -947,6 +997,10 @@ a {
   padding-bottom: 20px;
 }
 
+.EcoSystemContainerBox ul li:nth-child(1) {
+  list-style-type: none;
+}
+
 .EcoSystemContainerBox ul li {
   margin-left: 35px;
   color: #FF6868;
@@ -971,6 +1025,9 @@ a {
   width: 75%;
   padding: 20px 0px;
 }
+.EcoSystem-p a{
+  color: yellow;
+}
 
 .EcoSystem-textIcon {
   display: flex;
@@ -990,8 +1047,8 @@ a {
 }
 
 .EcoSystem-textIcon img {
-  width: 3rem;
-  height: 3rem;
+  width: 3.5rem;
+  height: 3.5rem;
   object-fit: contain;
   margin-left: 20px;
 }
@@ -1009,7 +1066,7 @@ a {
   margin: auto;
   justify-content: center;
   align-items: center;
-  /* border: 1px solid red; */
+  gap: 30px;
 }
 
 .thesoldiersNFTBox {
@@ -1104,15 +1161,9 @@ a {
   align-items: center;
 }
 
-.WarxContainerInnerBox-img-bugs img:nth-child(1) {}
 
 .WarxContainerInnerBox-img-bugs img:nth-child(2) {
-  margin-top: -20px;
-
-}
-
-.WarxContainerInnerBox-img-bugs img:nth-child(2) {
-  margin-top: -40px;
+  margin-top: -10px;
 
 }
 
@@ -1185,7 +1236,7 @@ a {
 
 .BettingSectionContainerBox p {
   color: #FFF;
-  text-align: center;
+  text-align: left;
   font-size: 16px;
   font-style: normal;
   font-weight: 400;
@@ -1475,6 +1526,10 @@ a {
   .BettingSectionContainerCentered {
     width: 90%;
   }
+.HelmetSectionContainerCentered h5 {
+  font-size: 3vw;
+  width: 90%;
+}
 }
 
 @media only screen and (max-width: 870px) {

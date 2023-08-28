@@ -30,12 +30,12 @@
 }
 
 .accordion-content {
-    font-size: 1.6rem;
+    font-size: 18px;
     text-align: left;
     padding: 0 0.5rem;
     padding-bottom: 2rem;
     color: #52525B;
-    line-height: 1.5rem;
+    line-height: 1.8rem;
     font-size: 14px;
     color: white;
     font-family: var(--font-transducer-test);

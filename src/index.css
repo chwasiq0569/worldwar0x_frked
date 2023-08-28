@@ -59,6 +59,9 @@
     url("./fonts/Median-Regular.otf") format("woff");
 }
 
+html {
+  scroll-behavior: smooth;
+}
 body {
 
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',

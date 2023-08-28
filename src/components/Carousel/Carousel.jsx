@@ -163,7 +163,7 @@ const Carousel = () => {
           ))}
           <button className="carousel_btn carousel_btn--next" onClick={() => nextClick()}>
             <svg xmlns="http://www.w3.org/2000/svg" width="60" height="87" viewBox="0 0 60 87" fill="none">
-              <path d="M60 43.5L0.75 86.3683L0.75 0.631744L60 43.5Z" fill="#9F9F9F" />
+              <path d="M60 43.5L0.75 86.3683L0.75 0.631744L60 43.5Z" fill="#ED1C27" />
             </svg>
           </button>
         </div>

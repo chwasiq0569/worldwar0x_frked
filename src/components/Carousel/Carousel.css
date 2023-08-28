@@ -222,8 +222,8 @@
 }
 
 .carousel__dots .dot {
-  background: #ccc;
-  border: 0;
+  background: transparent;
+  border: 5px solid #ed1c27;
   border-radius: 50%;
   cursor: pointer;
   height: 2rem;
@@ -233,8 +233,30 @@
   width: 2rem;
 }
 
-.carousel__dots .dot.active {
-  background: #ed1c27;
+/* .carousel__dots .dot.active {
+  border: 5px solid #ccc;
+  background: #ccc;
+} */
+
+
+.carousel__dots .dot:nth-child(2){
+  border: 5px solid #ccc;
+  background: #ccc;
+  margin-left: 60px;
+}
+
+.carousel__dots .dot:nth-child(6){
+  margin-right: 60px;
+}
+
+.carousel__dots .dot:nth-child(3){
+  display: none;
+}
+.carousel__dots .dot:nth-child(4){
+  display: none;
+}
+.carousel__dots .dot:nth-child(5){
+  display: none;
 }
 
 .carousel_btn {

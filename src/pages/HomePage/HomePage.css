@@ -297,6 +297,7 @@ a {
   width: 100%;
   /* border: 1px solid red; */
 }
+
 /* .scrolling-text-container {
   overflow: hidden; 
   width: 100%;      
@@ -322,7 +323,7 @@ a {
   font-size: 8vw;
   font-weight: 400;
   text-align: center;
-  white-space: nowrap; 
+  white-space: nowrap;
 
   /* letter-spacing: 8px; */
   /* line-height: 128px; */
@@ -338,7 +339,6 @@ a {
 }
 
 /* New */
-
 
 
 .HelmetSectionContainerCentered h5 {
@@ -377,15 +377,17 @@ a {
   margin-right: 10px;
   top: 0;
 }
-.HelmetSectionContainerCentered h5 span.quotation:nth-child(1){
-  /* padding-left: -200px; */
+
+.HelmetSectionContainerCentered h5 span.quotation:nth-child(1) {
   left: 0;
   top: 50px;
 }
-.HelmetSectionContainerCentered h5 span.quotation:nth-child(2){
+
+.HelmetSectionContainerCentered h5 span.quotation:nth-child(2) {
   right: 0;
   top: 50px;
 }
+
 .secondary_text_container {
   display: flex;
   justify-content: center;
@@ -1025,7 +1027,8 @@ a {
   width: 75%;
   padding: 20px 0px;
 }
-.EcoSystem-p a{
+
+.EcoSystem-p a {
   color: yellow;
 }
 
@@ -1526,10 +1529,11 @@ a {
   .BettingSectionContainerCentered {
     width: 90%;
   }
-.HelmetSectionContainerCentered h5 {
-  font-size: 3vw;
-  width: 90%;
-}
+
+  .HelmetSectionContainerCentered h5 {
+    font-size: 3vw;
+    width: 90%;
+  }
 }
 
 @media only screen and (max-width: 870px) {
@@ -1625,6 +1629,22 @@ a {
 
   .BettingSectionInnerBox {
     text-align: center;
+  }
+
+  .HelmetSectionContainerCentered h5 span.quotation {
+    font-size: 40px;
+  }
+
+  .HelmetSectionContainerCentered h5 {
+    padding: 0px 40px;
+  }
+
+  .HelmetSectionContainerCentered h5 span.quotation:nth-child(1) {
+    top: 30px;
+  }
+
+  .HelmetSectionContainerCentered h5 span.quotation:nth-child(2) {
+    top: 30px;
   }
 
 }

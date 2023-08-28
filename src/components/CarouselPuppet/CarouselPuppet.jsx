@@ -46,6 +46,16 @@ const MyCarousel = () => {
     const [items, setItems] = React.useState(imageData);
     const [selectedItem, setSelectedItem] = React.useState(Math.floor(items.length / 2));
     const [selectedItemImg, setSelectedItemImg] = React.useState(Math.floor(items.length / 2));
+    const [isAnimating, setIsAnimating] = React.useState(false);
+    const [itemNumber, setItemNumber] = React.useState(1)
+
+    const handleAnimation = () => {
+        setIsAnimating(true);
+        // Add a delay to remove the animation class after the animation is completed
+        setTimeout(() => {
+            setIsAnimating(false);
+        }, 1000); // Adjust the delay time based on your animation duration
+    };
 
     console.log('selectedItem', imageData[selectedItem])
 
@@ -61,6 +71,8 @@ const MyCarousel = () => {
 
             return copy;
         });
+        handleAnimation()
+        setItemNumber(itemNumber => itemNumber < items.length ? itemNumber + 1 : 1)
     };
 
     const shiftPrev = () => {
@@ -74,6 +86,8 @@ const MyCarousel = () => {
 
             return copy;
         });
+        handleAnimation()
+        setItemNumber(itemNumber => itemNumber > 1 ? itemNumber - 1 : items.length)
     };
 
     return (
@@ -83,12 +97,12 @@ const MyCarousel = () => {
                 <h2>LEGENDARY <span className="level-span">1/1</span>  SOLDIERS</h2>
                 <p>A select number of Soldier NFTs will feature one-of-one (1/1) characters with completely unique outfits. Explore a rich history of famous historical figures from all parts of the world – from Julius Caesar, Cleopatra to Genghis Khan and more.</p>
                 <div className='HelmetSectionContainerIMG scrolling-text-container'>
-                    <marquee className='scrolling-text'>{imageTextsh3[selectedItem]}</marquee>
-                    <div className='asdas'>
+                    <marquee className={isAnimating ? 'fade_in_animation' : 'scrolling-text'}>{imageTextsh3[selectedItem]}</marquee>
+                    <div className={isAnimating ? 'fade_in_animation' : ''}>
                         <img src={imagePuppets[selectedItem]} alt="" />
                     </div>
                 </div>
-                <h5><span className="quotation">"</span>{imageTexts[selectedItem]}<span className="quotation">"</span></h5>
+                <h5 className={isAnimating ? 'fade_in_animation' : ''}><span className="quotation">"</span>{imageTexts[selectedItem]}<span className="quotation">"</span></h5>
 
 
                 <div style={{ display: 'flex', alignItems: 'center' }} className='maindivcustom'>
@@ -97,7 +111,7 @@ const MyCarousel = () => {
                         <div
                             key={item.id}
                             className='custom-div'
-                            style={{ width: index === 2, height: index === 2}}
+                        // style={{ width: index === 2, height: index === 2}}
                         >
                             <img
                                 src={item.src}
@@ -108,12 +122,9 @@ const MyCarousel = () => {
                     ))}
                     <button onClick={shiftNext} className="custom-button"><img src={arrow7} alt="" /></button>
                 </div>
-
-
+                <p>{itemNumber}<span style={{ opacity: '0.7' }}> / {items.length}</span></p>
             </div>
         </div>
-
-
     );
 }
 

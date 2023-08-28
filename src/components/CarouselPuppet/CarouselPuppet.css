@@ -33,11 +33,13 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    transition: 0.5s ease-in-out;
+    transition: 0.3s ease-in-out;
 }
-.custom-div:hover{
-    width: 4.5rem;
-    height: 4.5rem;
+
+.custom-div:hover {
+    /* width: 4.5rem;
+    height: 4.5rem; */
+    transform: rotate(45deg) scale(1.2);
 }
 
 /* Styling for the selected div */
@@ -60,6 +62,23 @@
     transform: rotate(-45deg);
 }
 
+.fade_in_animation {
+    animation: fadeIn 1s ease-in forwards;
+    /* Apply the fade-in animation */
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        /* Start from opacity 0 */
+    }
+
+    to {
+        opacity: 1;
+        /* End with opacity 1 */
+    }
+}
+
 
 @media only screen and (max-width: 1090px) {
     .HelmetSectionContainerIMG img {
@@ -67,6 +86,7 @@
         height: 273px;
     }
 }
+
 @media only screen and (max-width: 900px) {
     .HelmetSectionContainerIMG img {
         /* width: 170px; */

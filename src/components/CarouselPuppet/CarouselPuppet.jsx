@@ -12,6 +12,7 @@ import kimssss from '../../assets/image 1174.png';
 import arrow8 from '../../assets/Arrow 8.png'
 import arrow7 from '../../assets/Arrow 7.png'
 
+
 const imageData = [
     { id: 1, src: kim, alt: 'Image 1' },
     { id: 2, src: kims, alt: 'Image 2' },
@@ -98,7 +99,7 @@ const MyCarousel = () => {
                 <p>A select number of Soldier NFTs will feature one-of-one (1/1) characters with completely unique outfits. Explore a rich history of famous historical figures from all parts of the world – from Julius Caesar, Cleopatra to Genghis Khan and more.</p>
                 <div className='HelmetSectionContainerIMG scrolling-text-container'>
                     <marquee className={isAnimating ? 'fade_in_animation' : 'scrolling-text'}>{imageTextsh3[selectedItem]}</marquee>
-                    <div className={isAnimating ? 'fade_in_animation' : ''}>
+                    <div className={isAnimating ? 'fade_up_animation' : 'puppetImage'}>
                         <img src={imagePuppets[selectedItem]} alt="" />
                     </div>
                 </div>
@@ -106,7 +107,7 @@ const MyCarousel = () => {
 
 
                 <div style={{ display: 'flex', alignItems: 'center' }} className='maindivcustom'>
-                    <button onClick={shiftPrev} className="custom-button"><img src={arrow8} alt="" /></button>
+                    <button disabled={isAnimating} onClick={shiftPrev} className="custom-button"><img src={arrow8} alt="" /></button>
                     {items.map((item, index) => (
                         <div
                             key={item.id}
@@ -120,7 +121,7 @@ const MyCarousel = () => {
                             />
                         </div>
                     ))}
-                    <button onClick={shiftNext} className="custom-button"><img src={arrow7} alt="" /></button>
+                    <button disabled={isAnimating} onClick={shiftNext} className="custom-button"><img src={arrow7} alt="" /></button>
                 </div>
                 <p>{itemNumber}<span style={{ opacity: '0.7' }}> / {items.length}</span></p>
             </div>

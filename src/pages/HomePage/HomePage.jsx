@@ -38,7 +38,7 @@ import squadsLine from "../../assets/Rectangle 53.png";
 import mobileVersionImg from "../../assets/Group 5.png";
 import appStore from "../../assets/Group 6.png";
 import googlePlay from "../../assets/Group 7.png";
-import ecosystemImg from "../../assets/Group 2.png";
+import ecosystemImg from "../../assets/Auto-Tranny-Header-122.png";
 import ecosystemflower from "../../assets/Group8.png";
 import hand from "../../assets/hand.png";
 import group65 from "../../assets/Group 65.png";
@@ -65,13 +65,13 @@ import CarouselPuppet from '../../components/CarouselPuppet/CarouselPuppet';
 
 
 const HomePage = () => {
-
+    const [moveToBack, setMoveToBack] = React.useState(false);
 
     return (
         <div>
-            <Navbar />
+            <Navbar moveToBack={moveToBack} setMoveToBack={setMoveToBack} />
 
-            <HeroSection />
+            <HeroSection moveToBack={moveToBack} />
 
             <div className="FirstEditionContainer" id='FirstEdition'>
                 <div className="FirstEditionContainerCentered">
@@ -405,7 +405,7 @@ const HomePage = () => {
                 </div>
             </div>
 
-            <div className="FAQsSectionContainer">
+            <div className="FAQsSectionContainer" id='FAQ'>
                 <h2>FAQ</h2>
                 <div className='FaqsSectionCentered'>
                     <Accordion

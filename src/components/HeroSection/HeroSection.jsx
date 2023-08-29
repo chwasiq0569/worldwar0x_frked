@@ -3,10 +3,10 @@ import herologo from "../../assets/herologo.png";
 import gamePlay from '../../assets/Gameplay.mp4';
 import './HeroSection.css';
 
-const HeroSection = () => {
+const HeroSection = ({ moveToBack }) => {
     return (
         <div>
-            <div className="HeroSectionContainer">
+            <div className={moveToBack ? "HeroSectionContainer moveToBack" : "HeroSectionContainer"}>
                 <video controls muted autoPlay loop className="video-container no-controls">
                     <source src={gamePlay} type="video/mp4" />
                 </video>

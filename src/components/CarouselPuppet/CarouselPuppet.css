@@ -26,7 +26,7 @@
 
 .custom-div {
     transform: rotate(45deg);
-    border: 5px solid #ED1C27;
+    border: 3px solid #ED1C27;
     width: 4rem;
     height: 4rem;
     margin: 0 1.7rem;
@@ -39,7 +39,7 @@
 .custom-div:hover {
     /* width: 4.5rem;
     height: 4.5rem; */
-    transform: rotate(45deg) scale(1.2);
+    transform: rotate(45deg) scale(1.1);
 }
 
 /* Styling for the selected div */

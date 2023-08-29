@@ -27,12 +27,17 @@
     display: none !important;
 }
 
+.moveToBack {
+    z-index: -1;
+}
+
 .HeroCenteredContent {
     /* position: absolute; */
     position: relative;
     display: flex;
     flex-direction: column;
     align-items: center;
+
 }
 
 .HeroCenteredContent img {}
@@ -127,7 +132,6 @@
 
     .HeroCenteredContent h2 {
         font-size: 28px;
-        /* margin-top: 30px; */
     }
 
     .HeroCenteredContent h3 {
@@ -173,6 +177,7 @@
     .HeroCenteredContent {
         margin-top: -100px;
     }
+
     .HeroCenteredContent img {
         width: 70%;
     }

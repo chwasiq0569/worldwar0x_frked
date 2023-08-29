@@ -8,12 +8,24 @@ import tikTok from "../../assets/37.png";
 
 import './Navbar.css';
 
-const Navbar = () => {
+const Navbar = ({ setMoveToBack, moveToBack }) => {
     const [isMenuOpen, setIsMenuOpen] = useState(false);
 
     const toggleMenu = () => {
         setIsMenuOpen(!isMenuOpen);
     };
+
+    React.useEffect(() => {
+        isMenuOpen ? document.body.style.overflow = 'hidden' : document.body.style.overflow = 'auto'
+        if (moveToBack) {
+            setTimeout(() => {
+                setMoveToBack(isMenuOpen)
+            }, 1000)
+        } else {
+            setMoveToBack(isMenuOpen)
+        }
+
+    }, [isMenuOpen])
 
     return (
         <div>
@@ -38,8 +50,8 @@ const Navbar = () => {
                             <li><a href="https://discord.gg/worldwar0x" target="_blank"><img className="image-1156-icon" alt="" src={headDiscord} /></a></li>
                             <li><a href="https://twitter.com/WorldWar0x" target="_blank"><img className="image-1156-icon" alt="" src={headTwitter} /></a></li>
                             <li><a href="https://www.youtube.com/channel/UC4mQ9cT7wDV6aqOuoMaX3vA" target="_blank"><img className="image-1156-icon" alt="" src={headYoutube} /></a></li>
-                            <li><a href="https:/instagram.com/worldwar0x" target="_blank"><img className="image-1156-icon" alt="" src={headSoo} /></a></li>
-                            <li><a href="https://www.youtube.com/channel/UC4mQ9cT7wDV6aqOuoMaX3vA" target="_blank"><img className="image-1156-icon" alt="" src={tikTok} /></a></li>
+                            <li><a href="https://instagram.com/worldwar0x" target="_blank"><img className="image-1156-icon" alt="" src={headSoo} /></a></li>
+                            <li><a href="https://www.tiktok.com/@worldwar0x" target="_blank"><img className="image-1156-icon" alt="" src={tikTok} /></a></li>
                         </ul>
                         {/* <button className="GetWhiteListedBtn">GET WHITELISTED</button> */}
                         <div class="GetWhiteListedBtn">

@@ -297,6 +297,7 @@ a {
   width: 100%;
   /* border: 1px solid red; */
 }
+
 /* .scrolling-text-container {
   overflow: hidden; 
   width: 100%;      
@@ -316,16 +317,22 @@ a {
   }
 } */
 
-.HelmetSectionContainerIMG marquee {
+.HelmetSectionContainerIMG marquee {}
+
+.HelmetSectionContainerIMG marquee h1 {
   color: #ED1C27;
   font-family: var(--font-pink-and-crimson);
   font-size: 8vw;
+  width: max-content !important;
   font-weight: 400;
   text-align: center;
-  white-space: nowrap; 
-
-  /* letter-spacing: 8px; */
-  /* line-height: 128px; */
+  white-space: nowrap;
+  background-image: url('https://i.imgur.com/qqn6n6y.png');
+  background-size: cover;
+  background-repeat: no-repeat;
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
 }
 
 .HelmetSectionContainerIMG img {
@@ -333,12 +340,9 @@ a {
   height: 373px;
   position: relative;
   margin-top: -300px;
-  /* object-fit: cover; */
-
 }
 
 /* New */
-
 
 
 .HelmetSectionContainerCentered h5 {
@@ -366,26 +370,33 @@ a {
   font-weight: 400;
   line-height: 26px;
   width: 80%;
+
 }
 
 .HelmetSectionContainerCentered h5 span.quotation {
   position: absolute;
-  font-size: 82px;
+  font-size: 70px;
   color: #ed1c27;
   vertical-align: middle;
   line-height: 0;
   margin-right: 10px;
   top: 0;
+
+  font-family: var(--font-gilroy);
+
 }
-.HelmetSectionContainerCentered h5 span.quotation:nth-child(1){
-  /* padding-left: -200px; */
+
+.HelmetSectionContainerCentered h5 span.quotation:nth-child(1) {
   left: 0;
   top: 50px;
+  transform: rotate(-5deg);
 }
-.HelmetSectionContainerCentered h5 span.quotation:nth-child(2){
+
+.HelmetSectionContainerCentered h5 span.quotation:nth-child(2) {
   right: 0;
   top: 50px;
 }
+
 .secondary_text_container {
   display: flex;
   justify-content: center;
@@ -417,7 +428,55 @@ a {
   justify-content: space-between;
   align-items: center;
   margin-top: 150px;
+
+  /* animation: shake 0.82s cubic-bezier(.36, .07, .19, .97) both infinite; */
+
 }
+
+.ANewEraContainer-img :nth-child(2) {
+  animation: wiggleShake 0.5s ease infinite;
+  margin-left: 9vw;
+}
+
+.ANewEraContainer-img :nth-child(3) {
+  animation: smoothUpAndDown 2s cubic-bezier(.36, .07, .19, .97) both infinite;
+
+}
+
+@keyframes smoothUpAndDown {
+
+  0%,
+  100% {
+    transform: translateY(-75px);
+  }
+
+  50% {
+    transform: translateY(-125px);
+  }
+}
+
+@keyframes wiggleShake {
+  0% {
+    transform: translateX(0) translateY(0);
+  }
+
+  25% {
+    transform: translateX(1px) translateY(-1px);
+  }
+
+  50% {
+    transform: translateX(-1px) translateY(1px);
+  }
+
+  75% {
+    transform: translateX(1px) translateY(-1px);
+  }
+
+  100% {
+    transform: translateX(0) translateY(0);
+  }
+}
+
 
 .ANewEraContainer-img img {
   mix-blend-mode: hard-light;
@@ -832,7 +891,6 @@ a {
 }
 
 .SquadsSectionContainer-InnerBox {
-  /* border: 1px solid yellow; */
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -840,6 +898,7 @@ a {
   padding-bottom: 20px;
   /* border: 1px solid red; */
 }
+
 
 .SquadsSectionContainer-InnerBox:nth-child(2) {
   display: flex;
@@ -992,7 +1051,7 @@ a {
 }
 
 .EcoSystemContainerBox ul {
-  list-style-type: disc;
+  list-style-type: none;
   display: flex;
   padding-bottom: 20px;
 }
@@ -1013,6 +1072,14 @@ a {
   letter-spacing: 1px;
 }
 
+.EcoSystemContainerBox ul li::before {
+  content: "\2022";
+  color: #CCCCCC;
+  font-weight: bold;
+  display: inline-block;
+  width: 1em;
+  margin-left: -1em;
+}
 
 .EcoSystem-p {
   color: #FFF;
@@ -1025,7 +1092,8 @@ a {
   width: 75%;
   padding: 20px 0px;
 }
-.EcoSystem-p a{
+
+.EcoSystem-p a {
   color: yellow;
 }
 
@@ -1163,8 +1231,7 @@ a {
 
 
 .WarxContainerInnerBox-img-bugs img:nth-child(2) {
-  margin-top: -10px;
-
+  margin-top: 0px;
 }
 
 /* $WARX End */
@@ -1526,10 +1593,11 @@ a {
   .BettingSectionContainerCentered {
     width: 90%;
   }
-.HelmetSectionContainerCentered h5 {
-  font-size: 3vw;
-  width: 90%;
-}
+
+  .HelmetSectionContainerCentered h5 {
+    font-size: 3vw;
+    width: 90%;
+  }
 }
 
 @media only screen and (max-width: 870px) {
@@ -1627,6 +1695,22 @@ a {
     text-align: center;
   }
 
+  .HelmetSectionContainerCentered h5 span.quotation {
+    font-size: 40px;
+  }
+
+  .HelmetSectionContainerCentered h5 {
+    padding: 0px 40px;
+  }
+
+  .HelmetSectionContainerCentered h5 span.quotation:nth-child(1) {
+    top: 30px;
+  }
+
+  .HelmetSectionContainerCentered h5 span.quotation:nth-child(2) {
+    top: 30px;
+  }
+
 }
 
 @media only screen and (max-width: 770px) {
@@ -1644,6 +1728,13 @@ a {
     height: 100px;
   }
 
+  .ANewEraContainer-img :nth-child(2) {
+    margin-left: 3vw;
+  }
+
+  .ANewEraContainer {
+    margin-top: -8rem;
+  }
 
 }
 

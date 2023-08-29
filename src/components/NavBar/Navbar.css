@@ -146,6 +146,14 @@
     display: none;
   }
 
+  .HeaderLeftSideContainer {
+    margin-top: -2rem;
+  }
+
+  .HeaderRightSideContainer {
+    margin-top: -1.5rem;
+  }
+
 }
 
 .SideMenu {
